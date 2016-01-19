@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+   <!--
+      Basic setup for tests using https://github.com/LaxarJS/laxar-jasmine-runner
+
+      Configure the path pointing to the root of your library below
+   -->
+   <script data-ax-library-base="../">
+      document.writeln( '<script type="text/javascript" src="' +
+         document.querySelector( 'script[data-ax-library-base]' ).dataset.axLibraryBase +
+         'jspm_packages/system.src.js"><' + '/script>' );
+   </script>
+   <script>
+      ( function() {
+         var base = document.querySelector( 'script[data-ax-library-base]' ).dataset.axLibraryBase;
+         var origConf = System.config;
+         System.config = function( conf ) {
+            conf.baseURL = base;
+            System.config = origConf;
+            System.config( conf );
+         }
+         document.writeln( '<script type="text/javascript" src="' +
+            base + 'system.config.js"><' + '/script>' );
+      } )();
+   </script>
+   <script>
+      System.import( document.querySelector( 'script[data-ax-library-base]' ).dataset.axLibraryBase + 'index' );
+   </script>
+</head>
+<body></body>
+</html>

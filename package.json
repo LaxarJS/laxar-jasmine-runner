@@ -24,5 +24,18 @@
   "homepage": "https://github.com/LaxarJS/laxar-jasmine-runner#readme",
   "dependencies": {
     "jasmine-core": "^2.4.1"
+  },
+  "jspm": {
+    "configFile": "system.config.js",
+    "dependencies": {
+      "css": "github:systemjs/plugin-css@^0.1.20",
+      "image": "github:systemjs/plugin-image@^0.1.0",
+      "jasmine-core": "npm:jasmine-core@^2.4.1"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
   }
 }
