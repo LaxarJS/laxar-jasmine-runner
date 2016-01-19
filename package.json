@@ -1,0 +1,28 @@
+{
+  "name": "laxar-jasmine-runner",
+  "version": "0.1.0-pre",
+  "description": "Small runner for jasmine tests loaded asynchronously in an ES2015 environment.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaxarJS/laxar-jasmine-runner.git"
+  },
+  "keywords": [
+    "LaxarJS",
+    "laxar",
+    "jasmine",
+    "ES2015"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LaxarJS/laxar-jasmine-runner/issues"
+  },
+  "homepage": "https://github.com/LaxarJS/laxar-jasmine-runner#readme",
+  "dependencies": {
+    "jasmine-core": "^2.4.1"
+  }
+}
