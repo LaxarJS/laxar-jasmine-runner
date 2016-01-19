@@ -9,8 +9,8 @@ window.jasmineRequire = jasmineRequire;
 
 const JASMINE_CORE = 'jasmine-core/lib/jasmine-core/';
 
-System.import( `${JASMINE_CORE}jasmine.css!` );
-System.import( 'jasmine-core/images/jasmine_favicon.png!image' )
+System.import( `${JASMINE_CORE}jasmine.css!`, __moduleName );
+System.import( 'jasmine-core/images/jasmine_favicon.png!image', __moduleName )
    .then( ( { src } ) => {
       const faviconElement = document.createElement( 'link' );
       faviconElement.href = src;
@@ -19,8 +19,8 @@ System.import( 'jasmine-core/images/jasmine_favicon.png!image' )
       document.querySelector( 'head' ).appendChild( faviconElement );
    } );
 
-System.import( `${JASMINE_CORE}jasmine-html` )
-   .then( () => System.import( `${JASMINE_CORE}boot` ) )
+System.import( `${JASMINE_CORE}jasmine-html`, __moduleName )
+   .then( () => System.import( `${JASMINE_CORE}boot`, __moduleName ) )
    .then( () => {
       const executeJasmineSpecs = window.onload;
       window.onload = () => {};
