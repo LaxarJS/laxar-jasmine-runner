@@ -1,6 +1,6 @@
 {
   "name": "laxar-jasmine-runner",
-  "version": "0.1.0-pre",
+  "version": "0.1.0",
   "description": "Small runner for jasmine tests loaded asynchronously in an ES2015 environment.",
   "main": "index.js",
   "scripts": {
